@@ -1,0 +1,34 @@
+.title {
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    color: #8840a5;
+}
+
+@font-face {
+    font-family: IndieFlower;
+    font-weight: normal;
+    src: url('../../fonts/IndieFlower-Regular.ttf');
+}
+
+ @font-face {
+    font-family: YellowRabbit;
+    font-weight: bold;
+    src: url('../../fonts/YellowRabbit.otf');
+}
+
+.headTitle {
+    width: auto;
+    margin: 15px;
+    font-family: IndieFlower;
+    font-size: 40px;
+}
+
+/* @font-face {
+    font-family: MyHelvetica;
+    src: local("Helvetica Neue Bold"),
+    local("HelveticaNeue-Bold"),
+    url(MgOpenModernaBold.ttf)P
+    font-weight: bold;
+  } */

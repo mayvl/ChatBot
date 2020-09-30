@@ -1,0 +1,36 @@
+@font-face {
+    font-family: IndieFlower;
+    font-weight: normal;
+    src: url('../../fonts/IndieFlower-Regular.ttf');
+}
+
+
+.paperContent {
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin: 20px;
+}
+
+.paper {
+    width: 50%;
+    margin: 15px auto;
+    border-radius: 5px;
+    background-color: rgb(236, 218, 252) !important;
+}
+.buttonLoginStyle {
+    font-family: IndieFlower !important;
+    color: rgb(113, 76, 143) !important;
+    margin: 10px !important;
+    font-size: 20px !important;
+}
+
+.centered {
+    justify-content: center !important;
+    text-align: center !important;
+    margin: 20px !important;
+}
+
+#spaceField {
+    margin: 10px auto;
+}

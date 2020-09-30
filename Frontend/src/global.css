@@ -1,0 +1,30 @@
+
+@font-face {
+    font-family: IndieFlower;
+    font-weight: normal;
+    src: url('./fonts/IndieFlower-Regular.ttf');
+}
+
+
+
+
+.buttonStyleGroup{
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+body{
+    background: #9796f0;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #fbc7d4, #9796f0);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #b689dd  , #93c3d6  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.buttonStyle {
+    font-family: IndieFlower;
+    text-decoration: none;
+    color: rgb(113, 76, 143);
+    margin: 15px;
+}
+

@@ -1,0 +1,33 @@
+.selector-container {
+    width: 100%;
+    height: auto;
+}
+
+.selector-content {
+    width: 80%;
+    height: auto ;
+    background-color: pink;
+    border-radius: 4px;
+    box-sizing: border-box !important;
+    margin: 10px 0 10px auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.Typography {
+    width: 90% !important;
+    box-sizing: border-box !important;
+    border-radius: 4px;
+    font-size: 14px !important;
+    background-color: rgb(161, 76, 126) !important;
+    color: white !important;
+    border-radius: 4px !important;
+    padding: 5px 5px 5px 10px !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    margin: 5px !important;
+}
+
+.Typography:hover{
+    background-color: rgba(228, 228, 228, 0.507) !important;
+}

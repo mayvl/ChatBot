@@ -1,0 +1,39 @@
+.inputText-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between !important;
+    
+}
+
+.TextField{
+    width: 85%;
+    border:1px solid #f5a2a2;
+    height: 35px;
+    padding-left: 15px;
+}
+
+.inputButton{
+    width: 10% !important;
+    height: 35px !important;
+    color: #73D4FB  !important;
+    justify-content: flex-end !important;
+
+}
+.MuiSvgIcon-root{
+    width: 50px !important;
+    height: 35px !important;
+}
+
+
+.MuiOutlinedInput-input{
+    padding: 10px !important;
+}
+
+.MuiOutlinedInput-root {
+ border-radius: 30px !important;
+ background-color: #D1F1FE  ;
+}
+.MuiOutlinedInput-root:active {
+ border-radius: 30px;
+ background-color: #D1F1FE  ;
+}

@@ -1,0 +1,38 @@
+version: "3"
+
+services:
+
+  database-react-bot:
+    image: postgres:10
+    container_name: database-react-bot
+    environment:
+      - POSTGRES_USER=may
+      - POSTGRES_PASSWORD=123
+      - POSTGRES_DB=database
+    networks:
+      - database_network
+    volumes:
+      - database_volume:/var/lib/postgresql/data
+
+  djangoapp-react-bot:
+    container_name: djangoapp-react-bot
+    build: .
+    volumes:
+      - .:/opt/services/djangoapp/src
+    networks:
+      - database_network
+    depends_on:
+      - database-react-bot
+    ports:
+      - 8000:8000
+    stdin_open: true
+    tty: true
+    command: >
+      sh -c "python3 manage.py runserver 0.0.0.0:8000"
+
+networks:
+  database_network:
+    driver: bridge
+
+volumes:
+  database_volume:

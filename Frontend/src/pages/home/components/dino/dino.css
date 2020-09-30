@@ -1,0 +1,23 @@
+@font-face {
+    font-family: IndieFlower;
+    font-weight: normal;
+    src: url('../../../../fonts/IndieFlower-Regular.ttf');
+}
+
+
+.dinoContainer{
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    display: flex;
+    width: 30%;
+    height: 5%;
+
+}
+
+.favoriteFont{
+    font-family: IndieFlower;
+    font-size: 10px;
+    color: rgb(113, 76, 143);
+    margin: 15px;
+}

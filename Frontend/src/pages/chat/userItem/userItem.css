@@ -1,0 +1,23 @@
+.userItem-container {
+ display: flex !important;
+ justify-content: flex-end !important;
+ padding-top: 10px;
+ padding-bottom: 10px;
+ padding-right: 0 !important;
+
+}
+
+.Typography{
+    font-size: 14px !important;
+    background: pink !important;
+    color: white !important;
+    border-radius: 4px !important;
+    width: fit-content !important;
+    box-sizing: border-box !important;
+    padding: 10px !important;
+    margin: 0 10px 5px 0 !important;
+}
+
+.userItem-container Avatar{
+    height: 55px;
+}
