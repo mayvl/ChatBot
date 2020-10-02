@@ -9,13 +9,59 @@ export default class Login extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            username: '',
+            password: '',
+            showError: true,
+            loginError: '*su usuario y/o contraseña son incorrectos',
 
         }
+        this.handleChange = this.handleChange.bind(this);
+        this.fetchUser = this.fetchUser.bind(this)
     }
 
-    Homepage(){
-        this.props.history.push("/home");
+
+    handleChange(e) {
+
+        this.setState({ [e.target.name]: e.target.value })
     }
+
+    Homepage() {
+        this.props.history.push("/home");
+        console.log(this.state.username, this.state.password)
+    }
+
+
+
+    fetchUser() {
+
+        fetch('http://localhost:8000/api/token/', {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json',
+            },
+            body: JSON.stringify(this.state),
+        })
+            .then(
+                (response) => {
+                    if (!response.ok) {
+
+                        throw Error(responsex)
+                    }
+                    return response
+                }
+            )
+            .then(
+                (response) => {
+
+                    this.Homepage()
+                },
+                (error) => {
+                    this.setState({ showError: false })
+                    console.log(error)
+                }
+            )
+    }
+
 
     render() {
         return (
@@ -35,18 +81,30 @@ export default class Login extends React.Component {
                             <Grid container>
                                 <Grid item xs={6}>
                                     <Grid item id='spaceField'>
-                                        <TextField id="standard-required spaceField" label="Nombre de usuario" /> <br />
+                                        <TextField id="standard-required spaceField"
+                                            label="Nombre de usuario"
+                                            name="username"
+                                            error={!this.state.showError && this.state.username != '' }
+                                            value={this.state.username}
+                                            onChange={e => this.handleChange(e)}
+                                        /> <br />
                                     </Grid>
                                     <Grid id='spaceField'>
-                                        <TextField type='password' id="standard-required spaceField" label="Contraseña" defaultValue="" /> <br />
+                                        <TextField type='password' id="standard-required spaceField"
+                                            label="Contraseña"
+                                            name="password"
+                                            error={!this.state.showError && this.state.passwords != '' }
+                                            value={this.state.password}
+                                            onChange={e => this.handleChange(e)} /> <br />
                                     </Grid>
+                                    {this.state.showError ? '' : this.state.loginError}
                                 </Grid>
 
                             </Grid>
                         </div>
                     </form>
                     <div>
-                        <Button className='buttonLoginStyle' onClick={()=>this.Homepage()}>
+                        <Button className='buttonLoginStyle' onClick={() => this.fetchUser()}>
                             Login!
                         </Button>
                     </div>

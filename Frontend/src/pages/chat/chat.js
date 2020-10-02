@@ -60,7 +60,7 @@ const Chat = () => {
 
 
 
-    useEffect( () => {
+    useEffect(() => {
         if (chat.length === 2) {
             setTimeout(() => firstResponse(message.message), 500);
             setMessages({ ...message, message: ' ' });
@@ -83,7 +83,7 @@ const Chat = () => {
         }
     ]
 
-    const [ interactions, setInteractions ] = useState([]);
+    const [interactions, setInteractions] = useState([]);
 
     function handleSelectOptions(value) {
         debugger
@@ -125,23 +125,23 @@ const Chat = () => {
                         }
                         {interactions.length > 0 && interactions.map((interaction, index) =>
                             <>
-                                
-                                    <DinoItem key={index} text={interaction}>
 
-                                    </DinoItem>
-                              
-                                    <Select
-                                        key={index}
-                                        handleSelectOptions={handleSelectOptions}
-                                        options={options} />
-                                
+                                <DinoItem key={index} text={interaction}>
+
+                                </DinoItem>
+
+                                <Select
+                                    key={index}
+                                    handleSelectOptions={handleSelectOptions}
+                                    options={options} />
+
                             </>
                         )}
 
                     </div>
                     <div className="chatInput">
                         <InputChat
-                        chat={chat}
+                            chat={chat}
                             message={message}
                             getMeMessage={getMeMessage}
                             sendMessage={sendMessage} />
