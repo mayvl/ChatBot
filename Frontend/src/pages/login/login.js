@@ -93,7 +93,7 @@ export default class Login extends React.Component {
                                         <TextField type='password' id="standard-required spaceField"
                                             label="Contraseña"
                                             name="password"
-                                            error={!this.state.showError && this.state.passwords != '' }
+                                            error={!this.state.showError && this.state.password != '' }
                                             value={this.state.password}
                                             onChange={e => this.handleChange(e)} /> <br />
                                     </Grid>
