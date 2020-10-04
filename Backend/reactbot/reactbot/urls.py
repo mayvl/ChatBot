@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from profiles.views import ChatViewSet, NewUserCreateAPIView
+from users.views import NewUserCreateAPIView
 from rest_framework import routers
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
@@ -23,8 +23,6 @@ from rest_framework_simplejwt.views import (
 )
 # Solo para los model viewset
 router = routers.DefaultRouter()
-router.register(r'chat', ChatViewSet)
-
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -33,5 +31,6 @@ urlpatterns = [
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 
-    path('api/create-new-user/', NewUserCreateAPIView.as_view(), name='create_new_user'),
+    path('api/create-new-user/', NewUserCreateAPIView.as_view(),
+         name='create_new_user'),
 ]
