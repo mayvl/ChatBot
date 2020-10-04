@@ -32,6 +32,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
 
+    'users.apps.UsersConfig',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,12 +43,11 @@ INSTALLED_APPS = [
 
     # Third party
 
-    'rest_framework',
-    'corsheaders',
+    # 'rest_framework',
+    # 'corsheaders',
 
     # Local Apps
 
-    'profiles',
 
 ]
 
@@ -81,6 +82,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'reactbot.wsgi.application'
 
+
+AUTH_USER_MODEL = 'users.CustomUser'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
