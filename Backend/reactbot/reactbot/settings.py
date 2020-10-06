@@ -25,7 +25,9 @@ SECRET_KEY = '!3w(23_qz(=760_f@!t0jy&g2x6m_g52y9m_n67dn0+e(hw3_+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '*',
+]
 
 
 # Application definition
@@ -45,8 +47,12 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'corsheaders',
+    'django_countries',
+    'django_extensions',
 
     # Local Apps
+
+    'chat.apps.ChatConfig'
 
 
 ]
@@ -151,3 +157,8 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:8001",
     "http://127.0.0.1:9000"
 ]
+
+GRAPH_MODELS = {
+  'all_applications': True,
+  'group_models': True,
+}

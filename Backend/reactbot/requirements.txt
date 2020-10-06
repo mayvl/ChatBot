@@ -5,3 +5,7 @@ django-filter
 django-cors-headers
 requests
 djangorestframework-simplejwt
+django-countries
+django-extensions
+pyparsing
+pydot
