@@ -68,7 +68,7 @@ export default class Signup extends React.Component {
             <Container className='paperContent'>
 
                 <Title />
-                <Paper className='paper' variant="outlined" square elevation={3}>
+                 <Paper className='paper' variant="outlined" square elevation={3}>
                     <form>
                         <div>
                             <div className='buttonStyleGroup'>
@@ -79,68 +79,70 @@ export default class Signup extends React.Component {
                                     Crear cuenta
                                 </Link>
                             </div>
-                            <Grid container >
-                                <Grid container>
-                                    <Grid item xs={6} id='spaceField'>
-                                        <TextField
-                                            required={!this.state.showError && this.state.firstName == ''}
-                                            id="standard-required spaceField"
-                                            label="Nombre Completo"
-                                            name="firstName"
-                                            onChange={e => this.handleChange(e)} />
-                                    </Grid>
-                                    <Grid item xs={6} id='spaceField'>
-                                        <TextField id="standard-required spaceField" label="Pais" defaultValue="" />
-                                    </Grid>
-                                    <Grid item xs={6} id='spaceField'>
-                                        <TextField
-                                            id="standard-required spaceField"
-                                            label="Genero"
-                                            defaultValue=""
-                                            SelectProps={{
-                                                multiple: true,
-                                                value: []
-                                            }}
-                                        >
-                                            <MenuItem>Fem</MenuItem>
-                                            <MenuItem>Male</MenuItem>
-                                        </TextField>
 
-                                    </Grid>
-                                    <Grid item xs={6} id='spaceField'>
-                                        <TextField
-                                            required={!this.state.showError && this.state.username == ''}
-                                            id="standard-required spaceField"
-                                            label="Nombre de usuario"
-                                            name="username"
-                                            onChange={e => this.handleChange(e)} />
-                                    </Grid>
-                                    <Grid item xs={6} id='spaceField'>
-                                        <TextField
-                                            required={!this.state.showError && this.state.password == ''}
-                                            id="standard-required spaceField"
-                                            label="Contraseña"
-                                            name="password"
-                                            onChange={e => this.handleChange(e)} />
-                                    </Grid>
-                                    <Grid item xs={6} id='spaceField'>
-                                        <TextField
-                                            
-                                            id="standard-required spaceField"
-                                            label="Confirmar contraseña"
-                                            defaultValue="" />
-                                    </Grid>
-                                    {this.state.showError ? '' : this.state.loginError}
+                            <Grid container spacing={2} className='gridPaperContainer'>
+
+                                <Grid item xs={12} sm={6} md={12} id='spaceField'>
+                                    <TextField
+                                        required={!this.state.showError && this.state.firstName == ''}
+                                        id="standard-required spaceField"
+                                        label="Nombre completo"
+                                        name="firstName"
+                                        onChange={e => this.handleChange(e)} />
                                 </Grid>
+                                <Grid item xs={12} sm={6} md={12} id='spaceField'>
+                                    <TextField id="standard-required spaceField" label="Pais" defaultValue="" />
+                                </Grid>
+                                <Grid item xs={12} sm={6} md={12} id='spaceField'>
+                                    <TextField
+                                        id="standard-required spaceField"
+                                        label="Genero"
+                                        defaultValue=""
+                                        SelectProps={{
+                                            multiple: true,
+                                            value: []
+                                        }}
+                                    >
+                                        <MenuItem>Fem</MenuItem>
+                                        <MenuItem>Male</MenuItem>
+                                    </TextField>
+
+                                </Grid>
+                                <Grid item xs={12} sm={6} md={12} id='spaceField'>
+                                    <TextField
+                                        required={!this.state.showError && this.state.username == ''}
+                                        id="standard-required spaceField"
+                                        label=" usuario"
+                                        name="username"
+                                        onChange={e => this.handleChange(e)} />
+                                </Grid>
+                                <Grid item xs={12} sm={6} md={12} id='spaceField'>
+                                    <TextField
+                                        required={!this.state.showError && this.state.password == ''}
+                                        id="standard-required spaceField"
+                                        label="Contraseña"
+                                        name="password"
+                                        onChange={e => this.handleChange(e)} />
+                                </Grid>
+                                <Grid item xs={12} sm={6} md={12} id='spaceField'>
+                                    <TextField
+
+                                        id="standard-required spaceField"
+                                        label="Confirmar contraseña"
+                                        defaultValue="" />
+                                </Grid>
+                                {this.state.showError ? '' : this.state.loginError}
                             </Grid>
-                        </div>
-                    </form>
+
+                         </div>
+                    </form> 
                     <div>
                         <Button className='buttonLoginStyle' onClick={() => this.saveUser()}>
                             Login!
                         </Button>
                     </div>
-                </Paper>
+               </Paper> 
+
             </Container >
         )
     }
