@@ -16,7 +16,6 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from users.views import NewUserCreateAPIView
-from chat.views import ChatList
 from rest_framework import routers
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
@@ -36,5 +35,4 @@ urlpatterns = [
     path('api/create-new-user/', NewUserCreateAPIView.as_view(),
          name='create_new_user'),
 
-    path('api/chat-list/', ChatList.as_view(), name='chat_list')
 ]

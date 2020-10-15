@@ -1,5 +1,8 @@
 .home-container{
+    width: 100;
     justify-content: center;
     display: flex;
     align-items: center;
+    text-align: center;
+    padding: 70px 0;
 }

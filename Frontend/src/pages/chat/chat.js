@@ -1,5 +1,5 @@
-import React, { useEstate, useState, useEffect } from 'react';
-import { Paper, Card, CardHeader, CardContent, Avatar, Typography, CardActions } from '@material-ui/core';
+import React, { useState, useEffect } from 'react';
+import { Paper  } from '@material-ui/core';
 import './chat.css';
 import DinoItem from './dinoItem/dinoItem';
 import UserItem from './userItem/userItem';
@@ -10,6 +10,9 @@ import { doing, aboutMe } from '../../data/actions';
 
 
 const Chat = () => {
+
+
+
     let idCounter = 0;
 
     const [message, setMessages] = useState({});
@@ -65,7 +68,9 @@ const Chat = () => {
             setTimeout(() => firstResponse(message.message), 500);
             setMessages({ ...message, message: ' ' });
             setTimeout(() => setOpenSelect(true), 600);
+
         }
+
     }, [chat])
 
     let options = [
@@ -86,7 +91,6 @@ const Chat = () => {
     const [interactions, setInteractions] = useState([]);
 
     function handleSelectOptions(value) {
-        debugger
         let result;
 
         switch (value) {
@@ -106,11 +110,12 @@ const Chat = () => {
         }
     }
 
+
     return (
         <div className="chatbot-container">
             <div className="chatbot-content">
 
-                <Paper elevation={3} className='chatbot-chat'>
+                <Paper elevation={3} overflow='auto' className='chatbot-chat'>
                     <div className='chatItems'>
                         {chat.map((message, index) =>
                             message.emitter == 'Dino' ?
@@ -137,7 +142,6 @@ const Chat = () => {
 
                             </>
                         )}
-
                     </div>
                     <div className="chatInput">
                         <InputChat

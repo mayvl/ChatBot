@@ -78,27 +78,27 @@ export default class Login extends React.Component {
                                     Crear cuenta
                                 </Link>
                             </div>
-                            <Grid container>
-                                <Grid item xs={6}>
-                                    <Grid item id='spaceField'>
-                                        <TextField id="standard-required spaceField"
-                                            label="Nombre de usuario"
-                                            name="username"
-                                            error={!this.state.showError && this.state.username != '' }
-                                            value={this.state.username}
-                                            onChange={e => this.handleChange(e)}
-                                        /> <br />
-                                    </Grid>
-                                    <Grid id='spaceField'>
-                                        <TextField type='password' id="standard-required spaceField"
-                                            label="Contraseña"
-                                            name="password"
-                                            error={!this.state.showError && this.state.password != '' }
-                                            value={this.state.password}
-                                            onChange={e => this.handleChange(e)} /> <br />
-                                    </Grid>
-                                    {this.state.showError ? '' : this.state.loginError}
+                            <Grid container spacing={1}>
+
+                                <Grid item item xs={12} sm={6} md={12} id='spaceField'>
+                                    <TextField id="standard-required spaceField"
+                                        label="Nombre de usuario"
+                                        name="username"
+                                        error={!this.state.showError && this.state.username != ''}
+                                        value={this.state.username}
+                                        onChange={e => this.handleChange(e)}
+                                    /> <br />
                                 </Grid>
+                                <Grid item item xs={12} sm={6} md={12} id='spaceField'>
+                                    <TextField type='password' id="standard-required spaceField"
+                                        label="Contraseña"
+                                        name="password"
+                                        error={!this.state.showError && this.state.password != ''}
+                                        value={this.state.password}
+                                        onChange={e => this.handleChange(e)} /> <br />
+                                </Grid>
+                                {this.state.showError ? '' : this.state.loginError}
+
 
                             </Grid>
                         </div>
